@@ -56,6 +56,14 @@ public class Risk implements Serializable{
     @ManyToOne
     private RiskManager manager;
 
+    @JoinColumn(name = "ASSET_ID", referencedColumnName = "ID")
+    @ManyToOne
+    private Assets assets;
+
+    @OneToOne
+    @JoinColumn(name = "VULNERABILITY_ID")
+    private Vulnerability vulnerability;
+
     public RiskManager getManager() {
         return manager;
     }
@@ -172,6 +180,22 @@ public class Risk implements Serializable{
 
     public void setRiskStatus(RiskStatus riskStatus) {
         this.riskStatus = riskStatus;
+    }
+
+    public Assets getAssets() {
+        return assets;
+    }
+
+    public void setAssets(Assets assets) {
+        this.assets = assets;
+    }
+
+    public Vulnerability getVulnerability() {
+        return vulnerability;
+    }
+
+    public void setVulnerability(Vulnerability vulnerability) {
+        this.vulnerability = vulnerability;
     }
 
     @Override

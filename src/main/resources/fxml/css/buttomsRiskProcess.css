@@ -1,0 +1,29 @@
+#red{
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+#green{
+    -fx-background-color:  #4CAF50;
+    -fx-text-fill: white;
+}
+
+#orange{
+    -fx-background-color:  #FDD835;
+    -fx-text-fill: white;
+}
+
+#red:hover{
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+}
+
+#green:hover{
+    -fx-background-color: #388E3C;
+    -fx-text-fill: white;
+}
+
+#orange:hover{
+    -fx-background-color: #F57F17;
+    -fx-text-fill: white;
+}

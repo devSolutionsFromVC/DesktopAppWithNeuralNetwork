@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.RiskTableController">
+   <children>
+      <TableView fx:id="tableView" prefHeight="463.0" prefWidth="651.0" stylesheets="@css/table.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="riskCol" prefWidth="150.0" text="Risk" />
+          <TableColumn fx:id="descCol" prefWidth="200.0" text="Description" />
+            <TableColumn fx:id="likehoodCol" prefWidth="100.0" text="Likehood" />
+            <TableColumn fx:id="lossCol" prefWidth="100.0" text="Loss" />
+            <TableColumn fx:id="valueCol" prefWidth="100.0" text="Value" />
+        </columns>
+      </TableView>
+      <VBox alignment="CENTER" layoutY="463.0" prefHeight="60.0" prefWidth="651.0">
+         <children>
+            <JFXButton onAction="#deleteRisks" prefHeight="37.0" prefWidth="161.0" styleClass="setup-button" stylesheets="@css/style.css" text="Remove">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

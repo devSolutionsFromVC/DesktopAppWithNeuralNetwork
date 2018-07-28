@@ -1,0 +1,11 @@
+.idea/*
+*.class
+*.iml
+hs_err_pid*
+*.jar
+*.war
+*.ear
+*.log
+/target
+
+

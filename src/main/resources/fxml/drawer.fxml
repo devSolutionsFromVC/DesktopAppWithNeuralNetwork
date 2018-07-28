@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="170.0" style="-fx-background-color: #235e66;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.DrawerController">
+   <children>
+       <ImageView fitHeight="166.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="@pictures/Безымянный.png" />
+          </image>
+       </ImageView>
+      <Pane prefHeight="262.0" prefWidth="170.0">
+         <children>
+            <JFXTextField fx:id="companyRegisterField" focusColor="#26cbba" labelFloat="true" layoutY="116.0" maxWidth="170.0" minWidth="160.0" prefHeight="31.0" prefWidth="170.0" promptText="Company" unFocusColor="BLACK" />
+            <JFXTextField fx:id="usernameRegisterField" focusColor="#26cbba" labelFloat="true" layoutY="24.0" maxWidth="170.0" minWidth="160.0" prefHeight="30.0" prefWidth="170.0" promptText="Username" unFocusColor="BLACK" />
+            <JFXTextField fx:id="passwordRegisterField" focusColor="#26cbba" labelFloat="true" layoutY="70.0" maxWidth="170.0" minWidth="160.0" prefHeight="31.0" prefWidth="170.0" promptText="Password" unFocusColor="BLACK" />
+            <JFXButton fx:id="createButton" buttonType="RAISED" layoutX="42.0" layoutY="174.0" onAction="#createManager" ripplerFill="#044d43" style="-fx-background-color: #26cbba;" text="Create" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</VBox>

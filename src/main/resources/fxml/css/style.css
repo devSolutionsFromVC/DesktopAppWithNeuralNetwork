@@ -1,0 +1,28 @@
+#pane{
+    -fx-background-image: url("pictures/space-1.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 530;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+#anchorPane{
+    -fx-background-image: url("pictures/triangles.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 530;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+.setup-button{
+    -fx-background-color: #204850;
+    -fx-text-fill: white;
+}
+
+.setup-button:hover{
+    -fx-background-color: #F57C00;
+    -fx-text-fill: #ffffff;
+}
+
+
+

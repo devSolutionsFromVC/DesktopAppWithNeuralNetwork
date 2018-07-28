@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.PresentController">
+   <children>
+       <ImageView fitHeight="413.0" fitWidth="878.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="@pictures/space-2.jpg" />
+          </image>
+       </ImageView>
+       <AnchorPane fx:id="anchorPane">
+          <children>
+            <Pane prefHeight="413.0" prefWidth="661.0">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="#204850" labelFloat="true" layoutX="232.0" layoutY="148.0" maxWidth="217.0" minWidth="170.0" prefHeight="31.0" prefWidth="197.0" promptText="Username" unFocusColor="BLACK">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXHamburger fx:id="hamburger" layoutX="357.0" layoutY="344.0" prefHeight="17.0" prefWidth="19.0" />
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="413.0" prefWidth="170.0" />
+                  <JFXPasswordField fx:id="password" focusColor="#204850" labelFloat="true" layoutX="232.0" layoutY="207.0" maxWidth="217.0" minWidth="170.0" prefHeight="31.0" prefWidth="197.0" promptText="Password" unFocusColor="BLACK">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="enterButton" blendMode="HARD_LIGHT" buttonType="RAISED" layoutX="285.0" layoutY="277.0" onAction="#startProgram" style="-fx-background-color: #204850;" text="START" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                     </padding>
+                  </JFXButton>
+                  <Label layoutX="285.0" layoutY="344.0" text="Registration" underline="true" />
+                  <Label fx:id="incorectLabel" layoutX="245.0" layoutY="368.0" prefHeight="19.0" prefWidth="170.0" textFill="RED" />
+               </children>
+            </Pane>
+          </children>
+       </AnchorPane>
+   </children>
+</StackPane>

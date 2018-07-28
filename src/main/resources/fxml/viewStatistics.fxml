@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.StatisticsController">
+   <children>
+      <PieChart fx:id="pieChart" labelLineLength="40.0" layoutY="5.0" legendSide="TOP" prefHeight="490.0" prefWidth="900.0" />
+      <JFXButton layoutX="320.0" layoutY="460.0" onAction="#riskStatActive" prefHeight="35.0" prefWidth="100.0" styleClass="setup-button" stylesheets="@css/style.css" text="Risk Stat">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="480.0" layoutY="460.0" onAction="#assetStatActive" prefHeight="35.0" prefWidth="100.0" styleClass="setup-button" stylesheets="@css/style.css" text="Asset Stat">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXListView fx:id="riskListView" layoutX="700.0" layoutY="45.0" prefHeight="100.0" prefWidth="200.0" stylesheets="@css/listView.css" />
+      <JFXListView fx:id="assetListView" layoutX="700.0" layoutY="360.0" prefHeight="100.0" prefWidth="200.0" stylesheets="@css/listView.css" />
+      <JFXHamburger fx:id="hamburger" layoutX="435.0" layoutY="468.0" />
+      <JFXDrawer fx:id="drawer" layoutY="110.0" prefHeight="280.0" prefWidth="70.0" />
+   </children>
+</AnchorPane>

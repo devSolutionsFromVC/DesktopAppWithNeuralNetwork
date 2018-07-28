@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="70.0" style="-fx-background-color: #235e66;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.StatisticDrawerController">
+   <children>
+      <Pane fx:id="pane" prefHeight="280.0" prefWidth="80.0">
+         <children>
+            <Button fx:id="excelButton" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
+            <Button fx:id="slackButton" layoutX="10.0" layoutY="115.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="trelloButton" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="18.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.AssetTableController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="41.0" prefHeight="463.0" prefWidth="650.0" stylesheets="@css/table.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="assetCol" prefWidth="110.0" text="Asset" />
+          <TableColumn fx:id="descCol" prefWidth="260.0" text="Description" />
+            <TableColumn fx:id="worthCol" prefWidth="70.0" text="Worth" />
+            <TableColumn fx:id="confCol" prefWidth="70.0" text="Conf" />
+            <TableColumn fx:id="integrityCol" prefWidth="70.0" text="Integrity" />
+            <TableColumn fx:id="accessCol" prefWidth="70.0" text="Access" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <HBox alignment="CENTER" layoutY="463.0" prefHeight="60.0" prefWidth="650.0">
+         <children>
+            <JFXButton alignment="CENTER" onAction="#removeAssetFromTable" prefHeight="37.0" prefWidth="161.0" styleClass="setup-button" stylesheets="@css/style.css" text="Remove" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

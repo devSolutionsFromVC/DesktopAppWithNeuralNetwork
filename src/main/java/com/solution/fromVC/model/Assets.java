@@ -46,6 +46,9 @@ public class Assets {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY, mappedBy = "assets")
     private List<Vulnerability> vulnerabilities;
 
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY, mappedBy = "assets")
+    private List<Risk> riskList;
+
     public Assets() {
     }
 
@@ -137,6 +140,14 @@ public class Assets {
 
     public void setVulnerabilities(List<Vulnerability> vulnerabilities) {
         this.vulnerabilities = vulnerabilities;
+    }
+
+    public List<Risk> getRiskList() {
+        return riskList;
+    }
+
+    public void setRiskList(List<Risk> riskList) {
+        this.riskList = riskList;
     }
 
     @Override

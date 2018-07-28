@@ -1,0 +1,6 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFEB3B;
+    -fx-effect: dropshadow( gaussian , rgba(245, 124, 0, 0.5), 0,0,0,1 );
+}

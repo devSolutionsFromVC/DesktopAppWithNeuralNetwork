@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solution.fromVC.fxconfig.ProcessingRiskController">
+   <children>
+      <JFXListView fx:id="riskListView" layoutX="14.0" layoutY="58.0" prefHeight="240.0" prefWidth="250.0" style="-fx-border-color: #204850;" stylesheets="@css/listView.css" />
+      <JFXListView fx:id="assetListView" layoutX="275.0" layoutY="58.0" prefHeight="240.0" prefWidth="250.0" style="-fx-border-color: #204850;" stylesheets="@css/listView.css" />
+      <Pane layoutX="14.0" layoutY="23.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label alignment="CENTER" layoutX="73.0" prefHeight="35.0" prefWidth="110.0" stylesheets="@css/generalLabel.css" text="Select Risk" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="275.0" layoutY="23.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label alignment="CENTER" layoutX="70.0" prefHeight="35.0" prefWidth="110.0" stylesheets="@css/generalLabel.css" text="Select Asset" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="riskName" layoutX="114.0" layoutY="315.0" prefHeight="30.0" prefWidth="150.0" stylesheets="@css/label.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="riskStatus" layoutX="114.0" layoutY="355.0" prefHeight="30.0" prefWidth="150.0" stylesheets="@css/label.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="assetName" layoutX="375.0" layoutY="315.0" prefHeight="30.0" prefWidth="150.0" stylesheets="@css/label.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="assetPriority" layoutX="375.0" layoutY="355.0" prefHeight="30.0" prefWidth="150.0" stylesheets="@css/label.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="315.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="100.0" stylesheets="@css/generalLabel.css" text="Risk" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="355.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label layoutY="-1.0" prefHeight="30.0" prefWidth="100.0" stylesheets="@css/generalLabel.css" text="Value" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="275.0" layoutY="315.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label layoutY="-1.0" prefHeight="30.0" prefWidth="100.0" stylesheets="@css/generalLabel.css" text="Asset" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="275.0" layoutY="355.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #204850;">
+         <children>
+            <Label layoutY="-1.0" prefHeight="30.0" prefWidth="100.0" stylesheets="@css/generalLabel.css" text="Worth" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="riskResultLabel" alignment="CENTER" layoutX="179.0" layoutY="422.0" prefHeight="40.0" prefWidth="346.0" textFill="#204850">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="14.0" layoutY="422.0" onAction="#procAction" prefHeight="40.0" prefWidth="130.0" styleClass="setup-button" stylesheets="@css/style.css" text="Processing" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="526.0" layoutY="23.0" prefHeight="271.0" prefWidth="359.0">
+         <children>
+            <LineChart fx:id="lineChart" legendSide="TOP" opacity="0.85" prefHeight="256.0" prefWidth="359.0" titleSide="BOTTOM" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" upperBound="5.0">
+                     <tickLabelFont>
+                        <Font name="System Bold" size="10.0" />
+                     </tickLabelFont>
+                  </NumberAxis>
+              </yAxis>
+            </LineChart>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="619.0" layoutY="280.0" prefHeight="180.0" prefWidth="250.0">
+         <children>
+            <JFXButton id="green" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="5" />
+            <JFXButton id="orange" layoutX="50.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="10" />
+            <JFXButton id="red" layoutX="100.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="15" />
+            <JFXButton id="red" layoutX="150.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="20" />
+            <JFXButton id="red" layoutX="200.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="25" />
+            <JFXButton id="green" layoutY="36.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="4" />
+            <JFXButton id="green" layoutY="72.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="3" />
+            <JFXButton id="green" layoutY="108.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="2" />
+            <JFXButton id="green" layoutY="144.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="1" />
+            <JFXButton id="green" layoutX="50.0" layoutY="144.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="2" />
+            <JFXButton id="green" layoutX="100.0" layoutY="144.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="3" />
+            <JFXButton id="green" layoutX="150.0" layoutY="144.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="4" />
+            <JFXButton id="orange" layoutX="200.0" layoutY="144.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="5" />
+            <JFXButton id="red" layoutX="200.0" layoutY="36.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="20" />
+            <JFXButton id="red" layoutX="200.0" layoutY="72.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="15" />
+            <JFXButton id="orange" layoutX="200.0" layoutY="108.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="10" />
+            <JFXButton id="green" layoutX="50.0" layoutY="108.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="4" />
+            <JFXButton id="green" layoutX="50.0" layoutY="72.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="6" />
+            <JFXButton id="orange" layoutX="50.0" layoutY="36.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="8" />
+            <JFXButton id="green" layoutX="100.0" layoutY="108.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="6" />
+            <JFXButton id="orange" layoutX="150.0" layoutY="108.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="8" />
+            <JFXButton id="orange" layoutX="100.0" layoutY="72.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="9" />
+            <JFXButton id="orange" layoutX="100.0" layoutY="36.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="12" />
+            <JFXButton id="orange" layoutX="150.0" layoutY="72.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="12" />
+            <JFXButton id="red" layoutX="150.0" layoutY="36.0" prefHeight="36.0" prefWidth="50.0" stylesheets="@css/buttomsRiskProcess.css" text="16" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
